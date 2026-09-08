@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
     STUDENT ||--o{ APPLICATION : submits
     JOB_POSTING ||--o{ APPLICATION : receives
@@ -40,7 +41,7 @@ erDiagram
         string officer_id FK
         string drive_title
         date drive_date
-        string venue_type "On-Campus / Virtual"
+        string venue_type
         string academic_year
     }
 
@@ -60,16 +61,16 @@ erDiagram
         string student_id FK
         string job_id FK
         date applied_date
-        string current_status "Pending / Shortlisted / Rejected"
+        string current_status
     }
 
     INTERVIEW {
         string interview_id PK
         string application_id FK
         int round_number
-        string round_type "Aptitude / Technical / HR"
+        string round_type
         datetime scheduled_time
-        string interview_status "Cleared / Failed"
+        string interview_status
         string feedback
     }
 
@@ -79,5 +80,6 @@ erDiagram
         date offer_date
         float final_ctc
         date joining_date
-        string acceptance_status "Accepted / Declined"
+        string acceptance_status
     }
+```
